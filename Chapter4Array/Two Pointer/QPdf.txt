@@ -1,0 +1,62 @@
+Section A: Two Pointer Technique (10 Questions)
+
+Q1. Sum of Two Numbers Equals Target
+Given a sorted array and a target, check if there are two numbers that sum up to the target.
+
+Q2. Check Palindrome Using Two Pointers
+Check if a string is a palindrome using the two-pointer approach.
+
+Q3. Count how many pairs in an unsorted array sum up to a target using two pointers.
+
+Q4. Merge Two Sorted Arrays (No Extra Space)
+Merge two sorted arrays in-place using the two-pointer method.
+
+Q5. Remove Duplicates from Sorted Array
+Remove duplicates from a sorted array using two pointers and return new length.
+
+Q6. Move Zeros to End
+Move all 0s to the end of the array while maintaining the order of non-zero elements.
+
+Q7. Reverse an Array In-Place
+Reverse an array using the two-pointer technique.
+
+Q8. Find Intersection of Two Sorted Arrays
+Return the intersection of two sorted arrays using two pointers.
+
+Q9. Sort Colors (Dutch National Flag Problem)
+Sort an array of 0s, 1s, and 2s using two/three pointers.
+
+Q10. Check if Two Strings Are Anagrams (Using Sorting and Two Pointers)
+Check if two strings are anagrams using sorting and comparing via two pointers.
+
+🔹 Section B: Sliding Window Technique (10 Questions)
+
+Q1. Maximum Sum Subarray of Size K
+Find the maximum sum of a subarray with size k.
+
+Q2. Minimum Sum Subarray of Size K
+Find the minimum sum of a subarray with size k.
+
+Q3. Check if Subarray with Given Sum Exists
+For a given sum, check if there’s a subarray with that sum using sliding window.
+
+Q4. Find First Negative Number in Every Window of Size K
+For each window of size k, find the first negative number.
+
+Q5. Longest Substring Without Repeating Characters
+Return the length of the longest substring with all unique characters.
+
+Q6. Count Occurrences of Anagram
+Count how many times an anagram of a string appears in another string.
+
+Q7. Maximum Number of Vowels in a Substring of Given Length
+Find the maximum number of vowels in any substring of length k.
+
+Q8. Find Max Average of Subarray of Size K
+Find the maximum average of any subarray of size k.
+
+Q9. Number of Subarrays of Size K with Average Greater Than Threshold
+Count how many subarrays of size k have an average greater than a given threshold.
+
+Q10. Sliding Window Maximum (Optional Advanced)
+Return the maximum in every window of size k (can be skipped or bonus).
