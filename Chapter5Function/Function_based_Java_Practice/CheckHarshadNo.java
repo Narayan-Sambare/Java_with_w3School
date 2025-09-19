@@ -10,22 +10,17 @@ public class CheckHarshadNo
         int n=sc.nextInt();
         isHarshad(n);
     }
-    // sum of digit logic function
-    public static int digitSum(int n)
-    {   int sum=0;
+    // harshada number logic function
+    public static void isHarshad(int n)
+    {   int t=n;
+         int sum=0;
         while(n>0)
         {  
             sum=sum+(n%10);
             n=n/10;
         }
-        return sum;
-    }
-
-    // harshada number logic function
-    public static void isHarshad(int n)
-    {
         
-        if((n%digitSum(n))==0)
+        if(t%Sum==0)
         {
            System.out.println("Harshad number ");
         }
