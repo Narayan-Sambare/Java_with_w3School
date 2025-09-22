@@ -10,6 +10,6 @@ public class HelloWord
 	public static void main(String x[])
 	{
 		printMessage p1=new printMessage();
-	
+		
 	}
 }

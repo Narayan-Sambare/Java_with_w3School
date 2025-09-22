@@ -37,9 +37,21 @@ class MaxFinder
 		{
 			System.out.println("Second numbers is max :"+b);
 		}
-		else
+		else if(a<c&&b<c)
 		{
 			System.out.println("Third number is max : "+c);
+		}
+		else if(a==b && a>c)
+		{
+			System.out.println("first  and second number equal max is "+a);
+		}
+		else if(a==c && a>b)
+		{
+			System.out.println("first  and third number equal  max is "+c);
+		}
+		else
+		{
+			System.out.println("second and third number equal max is "+b);
 		}
 	}
 }
