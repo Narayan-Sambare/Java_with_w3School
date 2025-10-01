@@ -21,7 +21,6 @@ public class CheckPalindrome
         int L=0,R=a.length-1;
 		 while(L<a.length)
 		 { 
-			
 			 if(a[L]==a[R])
 			 {
 				L++;
