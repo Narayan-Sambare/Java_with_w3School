@@ -127,7 +127,7 @@ public class LibraryManagement
 			System.out.println("-----------------------------------------------------------------------");
 				
 					System.out.println("list the books in the ascending order their id: \n");
-					for(int i=0;i<l.length;i++)//12,3,10
+					for(int i=0;i<l.length;i++)
 					{
 						for(int j=i;j<l.length-1;j++)
 						{
@@ -217,7 +217,7 @@ public class LibraryManagement
 			System.out.println("-----------------------------------------------------------------------");
 				
 						System.out.println("books name and price between range of 100r to 500r \n");
-						for(int i=0;i<l.length-1;i++)
+						for(int i=0;i<l.length;i++)
 						{
 							if(100<=l[i].getPrice()&&500>=l[i].getPrice())
 							{
