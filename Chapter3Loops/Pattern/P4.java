@@ -1,12 +1,12 @@
 /*
-*****
-****
-***
-**
-*
+* * * * *
+  * * * *
+    * * *
+      * *
+        *
 */
 
-public class Pattern4
+public class P4
 {
 	public static void main(String x[])
 	{
@@ -18,7 +18,8 @@ public class Pattern4
 				if(i<=j)
 				{
 				System.out.print("*");
-				}
+				}else System.out.print(" ");
+				 
 				
 			}
 			System.out.println();
