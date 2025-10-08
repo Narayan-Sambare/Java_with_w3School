@@ -16,13 +16,13 @@ public class FindMissingNo
         int n=sc.nextInt();
         int a[]=new int[n];
         
-            System.out.print("Enter 6 Array element\n");
+            System.out.print("Enter Array element\n");
         for(int i=0;i<n-1;i++) //give Aray element
         {
             a[i]=sc.nextInt();
         }
         int sum=0;
-        int total=(n*(n+1))5/2;
+        int total=(n*(n+1))/2;
         for(int i=0;i<a.length;i++) 
         {
             sum=sum+a[i];

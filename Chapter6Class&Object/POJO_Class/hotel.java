@@ -98,7 +98,7 @@ public class  hotel
 						
 						System.out.printf("--------------------------------------------Thank you ---------------------------------------\n\n");
 						
-							break;
+							break;z
 									
 						default:
 							return;

@@ -22,7 +22,7 @@ public class FindElement
 				break;
 			}
 		}
-		if(flag==true)
+		if(flag)
 		{
 			System.out.println("Element found");
 		}

@@ -6,7 +6,7 @@ public class MergeArray
 	{
 		Scanner in =new Scanner(System.in);
 		int a[]=new int[5];
-		int b[]=new int[a.length];
+		int b[]=new int[8];
 		int c[]=new int[a.length+b.length];
 		System.out.println("Enter values of array first");
 		for(int i=0;i<a.length;i++)
@@ -19,7 +19,7 @@ public class MergeArray
 		for(int i=0;i<b.length;i++)
 		{
 			b[i]=in.nextInt();
-			c[i+5]=b[i];
+			c[i+(a.length)]=b[i];
 		}
 		
 		for(int i=0;i<(a.length+b.length);i++)

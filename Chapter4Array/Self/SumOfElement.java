@@ -1,4 +1,4 @@
-//Q2. Write a java program to calculate sum of array is size 5.
+s//Q2. Write a java program to calculate sum of array is size 5.
 import java.util.*;
 public class SumOfElement{
 	public static void main(String x[]){

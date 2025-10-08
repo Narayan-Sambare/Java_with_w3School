@@ -19,15 +19,16 @@ public class MoveZeroToLast
 		}
 		for(int i=0;i<a.length;i++)
 		{
-			if(a[i]==0)
+			if(a[i]!=0)
 			{
-				int temp=a[i];
-				for(int j=i;j<a.length-1;j++)
-				 {
-					 a[j]=a[j+1];
-				 }
-				 a[k]=temp;
-				 k--;
+				int temp=a[k];
+				//  for(int j=i;j<a.length-1;j++)
+				//  {
+				// 	   a[j]=a[j+1];
+				//  }
+				a[k]=a[i];
+				a[i]=temp;
+				k++;
 		
 			}
 			

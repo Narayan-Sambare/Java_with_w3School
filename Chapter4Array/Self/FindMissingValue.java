@@ -33,17 +33,18 @@ public class FindMissingValue
 			boolean flag=false;
 			for(int j=0;j<a.length;j++)
 			{
-				if(a[j]!=i)
+				if(a[j]==i)
 				{	
 					flag=true;
+					break;
 				}
 				else
 				{
 					flag=false;
-					break;
+					
 				}			
 			}
-			if(flag)
+			if(!flag)
 			{
 				System.out.println(i);
 			}
