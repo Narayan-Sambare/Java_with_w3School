@@ -1,0 +1,38 @@
+Q1. What is class and why use it?
+Q2. How can we reuse class more than one time?
+Q3. What is encapsulation and explain encapsulation with real time scenario?
+Q4. What is diff instance variable, static variable and local variable?
+Q5. What is static keyword and explain static variable, static method?
+Q6. Explain any 4 important points related with static and instance variable?
+Q7. what is method variable arguments?
+Q8. what is array of object and how create array of object in java?
+Q9. what is Meta section and why use it?
+Q10. is It true static variable not stored in object?
+Q11. is it true static variable stored in Meta section?
+Q12. is it true instance variable allocate memory after object?
+Q13. is it true we cannot declare class as private, static and protected?
+Q14. what is nested class?
+
+
+Program for practice 
+
+Q1. Write a program to create class name as Cube with two methods
+void setValue(int x): this function accept number as parameter
+int getCube(): this function can calculate a cube of a number and return it.
+Q2. Write program to create class name as Factorial with two functions
+ void setValue(int x): this function accept number as parameter
+ int getFactorial(): this function can calculate the factorial of a number and return it.
+Q3. Write program to create class name as CheckChar with two functions
+ void setChar(char ch): this function accept single character as input
+ boolean checkChar(): this function can check character is alphabet or digit of special symbol if
+character is alphabet or digit return true if character is digit then return false.
+Q3. Write program to create class name as FindMax with two functions
+ void setArray(int a[]): this function is used for accept array as parameter
+ int getMax(): this function can find the max value from array and return it.
+Q4. Write program to create class name as SortArr with two functions
+ void setArray(int a[]): this function can accept array as parameter
+ int [] getSortArray(): this function can perform sorting on array and return sorted array
+Q5. Write program to create POJO class name as Employee with id,name and salary attribute and
+store data in object and retrieve data from object
+
+

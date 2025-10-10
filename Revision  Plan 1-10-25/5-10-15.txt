@@ -1,0 +1,63 @@
+
+Pattern program revision and new program for practice 
+
+Note: Revise all program did in lab 
+
+Q1. Print the following pattern?
+*********
+ *******
+  *****
+   ***
+    *
+   ***
+  *****
+ *******
+*********
+
+Q2.Hollow Diamond in a Rectangle?
+*********
+**** ****
+***   ***
+**     **
+*       *
+**     **
+***   ***
+**** ****
+*********
+
+
+Q3.Butterfly Pattern
+
+
+
+
+Q4. Hollow Hourglass
+
+
+Q5.Diamond with Cross in Center?
+
+Q6.Pascal-Inspired Triangle with Stars
+
+
+
+Q7.Palindromic Number Pyramid
+
+
+Q8. Floyd's Triangle (Right-aligned)?
+
+Q9.Diamond of Numbers?
+
+Q10.Pascal’s Triangle?
+
+Q11.Zig-Zag Number Wave?
+
+Q12.Alphabet Palindromic Pyramid
+
+Q13. Hollow Alphabet Diamond?
+
+
+Q14.Alphabet Hourglass?
+
+
+Q15.Alphabet Zig-Zag Wave?
+

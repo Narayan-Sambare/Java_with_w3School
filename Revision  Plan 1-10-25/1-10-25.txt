@@ -1,0 +1,37 @@
+1. What is java and explain features of java?
+2. Why is java a platform independent language?
+3. What is byte code and the importance of byte code?
+4. What is the difference between byte code and machine code?
+5. What is the difference between platform independency and cross platform?
+6. What is OOP and explain depth?
+7. What are the pillars of OOP?
+8. What is the difference between semi object oriented and pure object oriented?
+9. What is JDK, JRE and JVM?
+10. What is the difference between JDK JRE and JVM?
+11. What is JVM and explain its architecture?
+12. What is array and how many ways to declare an array in java?
+13. What is the difference between C array and java array?
+14. What is Jagged Array in java?
+15. What is an anonymous array in java?
+
+
+Program for practice 
+1. Write a program to input two values using command line argument and perform its swapping?
+2. Write a program to input numbers using Scanner class and reverse it?
+3. Write program to character from keyboard and check character is alphabet digit or special
+symbols?
+4. Write a program to input numbers and print its table?
+5. Write a program to input numbers and check if the number is perfect or not?
+6. Write a program to input numbers and check if the number is duck or not?
+7. Write a program to input numbers and check if the number is palindrome or not?
+8. Write a program to input numbers and check if the number is Armstrong or not?
+9. Write a program to check if a number is prime or not?
+10. Write a program to create an array of size 5 and display its value?
+11. Write a program to create an array of size 5 and find max value?
+12. Write a program to create an array of size and arrange all values in ascending order?
+13. Write program to create array of size 5 and input search key value and search value in array
+and if value found return its index and return -1
+14. Write a program to create an array of size 10 and find occurrences of every element in the array?
+15. Write program to create array of size 5 and reverse it
+
+

@@ -1,0 +1,283 @@
+Array Program for practice 
+
+MCQ Question on basic time complexity?
+
+1. What is the time complexity of accessing an element in an array by index?
+A. O(n)
+B. O(log n)
+C. O(1)
+D. O(n log n)
+
+2. What is the time complexity of a linear search in an unsorted array?
+
+A. O(1)
+B. O(n)
+C. O(log n)
+D. O(n log n)
+
+3. What is the time complexity of binary search on a sorted array?
+
+A. O(n)
+B. O(1)
+C. O(n log n)
+D. O(log n)
+
+4. Which algorithm typically has a time complexity of O(n log n)?
+
+A. Bubble Sort
+B. Merge Sort
+C. Linear Search
+D. Binary Search
+
+5. What is the time complexity of the following loop?
+    for(int i=1; i<=n; i++)
+    {  System.out.println("Good morning");
+    }
+
+6. what will be time complexity of given code?
+public class LogLoop {
+    public static void main(String[] args) {
+        int n = 16; // Example value
+        int logN = (int)(Math.log(n) / Math.log(2)); // log base 2
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < logN; j++) {
+                System.out.println("(" + i + ", " + j + ")");
+            }
+        }
+    }
+}
+
+
+7. What is the time complexity of inserting an element at the end of an array (amortized)?
+
+A. O(n)
+B. O(1)
+C. O(log n)
+D. O(n log n)
+
+8. What is the time complexity of the following function?
+
+ public class RecursiveFunc {
+    public static void main(String[] args) {
+        int n = 20; // Example input
+        func(n);
+    }
+
+    public static void func(int n) {
+        if (n == 0) {
+            return;
+        }
+        System.out.println(n);
+        func(n / 2);
+    }
+}
+
+
+9. What is the time complexity of this code?
+public class NestedLoop {
+    public static void main(String[] args) {
+        int n = 5; // Example value
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.println("(" + i + ", " + j + ")");
+            }
+        }
+    }
+}
+10. If an algorithm divides the input in half every time and processes each half recursively, what is its typical time complexity?
+
+A. O(n)
+B. O(log n)
+C. O(n log n)
+D. O(n^2)
+
+Program for practice with difficulty level
+1. Longest Subarray with Sum ≤ K (non-negative numbers)
+
+Problem:
+Given a non‑negative integer array arr[] and an integer K, find the length of the longest contiguous subarray whose sum is ≤ K.
+
+Approach / Explanation:
+Because the array has non-negative values, adding more elements increases the sum (it doesn’t go negative). Use a variable-size sliding window:
+
+Maintain two pointers left = 0, right = 0, and a running sum = 0.
+
+Expand right (i.e. include arr[right]) and add to sum.
+
+While sum > K and left ≤ right, shrink from the left: subtract arr[left], increment left.
+
+At each step, if sum ≤ K, consider updating the maximum window length: maxLen = max(maxLen, right - left + 1).
+
+Continue until right traverses whole array.
+
+Example:
+arr = [1, 2, 1, 0, 1, 1, 0], K = 4
+
+We can pick subarray [1,2,1,0] (sum 4) length 4, or [0,1,1,0,1] (sum 3) length 5, etc.
+The answer would be 5 (subarray [1,0,1,1,0] or similar).
+
+
+
+2. Minimum Size Subarray Sum ≥ S
+
+Problem:
+Given a positive integer array arr[] and an integer S, find the minimum length of a contiguous subarray such that its sum ≥ S. Return 0 if no such subarray exists.
+
+Approach / Explanation:
+Again sliding window with two pointers:
+
+left = 0, sum = 0, minLen = ∞.
+
+Iterate right from 0 to n - 1, adding arr[right] into sum.
+
+After each addition, while sum ≥ S, try to move left forward (i.e. shrink window) to see if we can get a smaller subarray still satisfying sum ≥ S. Subtract arr[left] and left++.
+
+Each time before shrinking further, update minLen = min(minLen, right - left + 1).
+
+After loop, if minLen remains ∞, return 0, else return minLen.
+
+Example:
+arr = [2, 3, 1, 2, 4, 3], S = 7
+Possible subarray [4,3] sum 7 length 2 is minimal, so answer = 2.
+
+
+3. Count Subarrays with Sum = K (non-negative array)
+Problem:
+Given a non-negative integer array arr[] and an integer K, count the number of contiguous subarrays whose sum is exactly K.
+
+Approach / Explanation:
+
+
+With non-negative, you can again use a sliding window:
+•	Use two pointers left, right, and sum = 0.
+•	Move right forward, add arr[right].
+•	While sum > K and left ≤ right, subtract arr[left] and move left.
+•	If sum == K at any point, you found a valid window; but note: when there are zeroes, there might be multiple starting points. One approach is: after finding sum == K, you may need to count how many zeros are immediately after left (or before right). But a simpler robust approach (if negatives allowed) is to use prefix sum + hash map; but here we assume non-negative so sliding window often works.
+
+Example:
+arr = [1, 1, 0, 0, 1], K = 2
+
+Subarrays: [1,1] (positions 0–1), [1,1,0] (0–2), [1,0,1] etc.  
+Careful counting: result might be more than just simplistic windows.
+
+
+4. Subarray Product < K
+
+Problem:
+Given an array arr[] of positive integers and integer K, find the number of contiguous subarrays whose product is less than K.
+
+Approach / Explanation:
+Use sliding window with two pointers and maintain the current product:
+
+If K ≤ 1, return 0 (since product of positives ≥ 1).
+
+left = 0, product = 1, count = 0.
+
+For right from 0 to n - 1:
+  multiply product *= arr[right].
+  While product ≥ K and left ≤ right, divide product /= arr[left] and left++.
+  Then all subarrays ending at right with start between left and right are valid, so add (right - left + 1) to count.
+
+
+Example:
+arr = [10, 5, 2, 6], K = 100
+Valid subarrays: [10], [5], [2], [6], [5,2], [2,6], [5,2,6] = total 8
+
+5. Two-Sum in Sorted Array (two pointers)
+
+Problem:
+Given a sorted array arr[] and a target T, find whether there exists a pair i < j such that arr[i] + arr[j] = T. Return their indices or a boolean.
+
+Approach / Explanation:
+Use two pointers:
+
+left = 0, right = n - 1.
+
+While left < right:
+ - If arr[left] + arr[right] == T, answer found.
+ - If sum < T, move left++ (to increase sum).
+ - If sum > T, move right-- (to decrease sum).
+
+If no such pair, return false / [-1, -1].
+
+Example:
+arr = [1, 2, 3, 4, 6], T = 6 → pairs: (2,4) or (1,5?)  
+Actually 2 + 4 = 6 → return indices (1, 3)
+
+
+6. Container With Most Water
+
+Problem:
+Given an array height[] of non-negative integers, each representing vertical lines at positions 0, 1, …, find two lines that, together with the x-axis, form a container that holds the maximum water. We want the maximum value of width * min(height[left], height[right]).
+
+Approach / Explanation:
+Use two pointers from the ends:
+
+left = 0, right = n - 1.
+
+While left < right:
+  - Compute area = (right - left) * min(height[left], height[right]). Update max area.
+  - Move the pointer that has the smaller height inward (because moving the larger height inward cannot increase area beyond what the shorter height allows).
+
+Example
+height = [1,8,6,2,5,4,8,3,7]
+Maximum area = 49 (between indices 1 and 8: width 7, height min(8,7)=7 → 7*7 = 49)
+
+7. Trapping Rain Water (Two-pointer)
+
+Problem:
+Given height[], compute how much water can be trapped between the bars after raining.
+
+Approach / Explanation (two-pointer variant):
+Instead of using stack or preprocessing arrays, there is the two-pointer approach:
+
+left = 0, right = n - 1.
+
+Maintain leftMax = 0, rightMax = 0, and water = 0.
+
+While left < right:
+  - If height[left] < height[right]:
+   - If height[left] ≥ leftMax, update leftMax = height[left].
+   - Else, water += leftMax - height[left].
+   - left++.
+  - Else:
+   - If height[right] ≥ rightMax, update rightMax = height[right].
+   - Else, water += rightMax - height[right].
+   - right--.
+
+At end, water holds total trapped.
+
+
+Example:
+height = [0,1,0,2,1,0,1,3,2,1,2,1]
+Trapped = 6
+
+8. Longest Subarray with At Most K Distinct Integers / Characters
+
+Problem:
+Given an integer array arr[], find the length of the longest contiguous subarray that contains at most K distinct integers.
+
+Approach / Explanation:
+Use sliding window + two pointers + a frequency map:
+
+left = 0, right = 0, maxLen = 0.
+
+Maintain a Map<Integer, Integer> freq that counts occurrences in the current window.
+
+Expand right: add arr[right], increment its count in freq.
+
+While freq.size() > K (i.e. too many distinct), shrink window from left: decrement freq[arr[left]], if count becomes 0, remove it, then left++.
+
+At each valid window (distinct count ≤ K), update maxLen = max(maxLen, right - left + 1).
+
+Return maxLen.
+
+Example:
+arr = [1,2,1,2,3], K = 2  
+Longest subarray with ≤ 2 distinct: [1,2,1,2] of length 4
+
+
+
+

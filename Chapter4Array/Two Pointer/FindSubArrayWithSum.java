@@ -34,15 +34,16 @@ public class FindSubArrayWithSum{
 		System.out.println("Enter the size of array");
 		int n=sc.nextInt();
 		int a[]=new int [n];
-		a[]={1, 2, 1, 0, 1, 1, 0};
+		//int a[]={1, 0, 1, 1, 0,1, 2};
+		
 		FindSubArrayWithSum s=new FindSubArrayWithSum();
-		//s.inputArray(a);
+		s.inputArray(a);
 		System.out.println("Enter value of K");
 		int k=sc.nextInt();
 		
 		s.FindSubArray(a,k);
 	}
-	/*
+	
 	void inputArray(int a[]){
 		System.out.println("enter the elemnt in array");
 		for(int i=0;i<arr.length;i++)
@@ -50,34 +51,36 @@ public class FindSubArrayWithSum{
 			a[i]=s1.nextInt();
 		}
 	}
-	*/
+	
 	
 	void FindSubArray(int a[],int k){
-		int r=0;sum=0;
-		int arr[];
-		
-		for(int i=r;i<a.length;i++)
-		{
+		int l=0,r,sum=0,maxLen=0,li=0,ri=0;
+		for(r=0;r<a.length;r++)
+		{	
+			sum+=a[r];
+			while(sum > k)
+			{
+				sum-=a[l];
+				l++;
+			}
 			
-			if(sum<=k)
-			{
-				sum=sum+a[i];
-				arr[c]=a[i];
-				c++;
-			}
-			else if(sum>k && i!=a.length-1)
-			{
-				arr[]=null;
-				c=0;
-				r++;
-			}
+			// display the max length of sub array
+			int currentLen = r - l;
+            if (sum <= k) {
+                if (currentLen > maxLen) {   
+                    maxLen = currentLen;
+					li=l;
+					ri=r;
+                }
+            } 
 		}
 		System.out.print("subarray[");
-		for(int i=0;i<arr.length;i++)
+		for(int s=li;s<ri;s++)
 		{
-			System.out.print(arr[i]+",");
+			System.out.print(a[s]+",");
 		}
-	System.out.print("]");
+	System.out.print("]\n");
+	System.out.println("max length is "+maxLen);
 
 		
 	}

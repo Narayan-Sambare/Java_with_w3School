@@ -1,0 +1,42 @@
+HTML & CSS
+
+Basic HTML Questions
+
+1.What is HTML and why is it used?
+2.What are tags in HTML? Give some examples.
+3.What’s the difference between <div> and <span>?
+4.What are semantic HTML elements? Give examples.
+5.What is the difference between <strong> and <b>, or <em> and <i>?
+6.How do you create a hyperlink in HTML?
+7.How can you insert an image in a webpage using HTML?
+8.What is the purpose of the alt attribute in <img>?
+9.What is the difference between block-level and inline elements?
+10.What is the role of the <!DOCTYPE html> declaration?
+
+Forms and Input Handling
+1.How do you create a form in HTML?
+2.What are some commonly used form input types?
+3.What is the purpose of the action and method attributes in forms?
+4.What’s the difference between GET and POST in a form?
+5.How can you group form elements together semantically? (Hint: <fieldset> and <legend>)
+6.How can you make a form field required before submission?
+7.What is the difference between disabled and readonly attributes
+8.What is the purpose of the autocomplete attribute on a form or input?
+
+
+HTML Structure and Layout
+1.What’s the purpose of <head> and <body> tags?
+2.What is the difference between <script>, <link>, and <style> tags?
+3.How do you include external CSS and JS files in HTML?
+4.What are meta tags? Give some examples and their uses.
+5.What is the difference between id and class attributes?
+6.How do you create a table in HTML?
+7.How can you create an unordered, ordered, and definition list in HTML?
+
+Advanced HTML & Best Practices
+1.What is the purpose of the data-* attributes in HTML5?
+2.How can you embed multimedia (video and audio) in HTML?
+3.What are iframes? How are they used, and what are their drawbacks?
+4.What is accessibility (a11y) in HTML and how can you improve it?
+5.How do you optimize HTML for SEO?
+

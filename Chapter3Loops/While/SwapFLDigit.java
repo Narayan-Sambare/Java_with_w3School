@@ -19,6 +19,7 @@ public class SwapFLDigit
 		int last = n%10;
 		int first=n/a;
 		int mid=n%a-last;
+		System.out.println(a);
 		System.out.println("Swap number: "+(last*a+mid+first));		
 	}
 }

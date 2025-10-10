@@ -1,0 +1,401 @@
+MCQ on looping ,array and basic topics 
+
+MCQ on Looping
+1. What is the output of the following code?
+int i = 0;
+for(System.out.print("A"); i < 2; System.out.print("C"), i++) {
+    System.out.print("B");
+}
+
+
+2. Which of the following is a valid for-loop in Java?
+
+A. for(int i=0; i<10; i++)
+B. for(;;)
+C. for(int i=0;;)
+D. All of the above
+
+3. What is the output of this code?
+int count = 0;
+for (int i = 0; i < 5; i++) {
+    for (int j = 5; j > i; j--) {
+        count++;
+    }
+}
+System.out.println(count);
+
+4. What is the output?
+int x = 0;
+while(x++ < 5) {
+    x++;
+}
+System.out.println(x);
+
+
+5. Infinite loop with output: What is printed?
+for (int i = 0; i != 10; i += 2) {
+    if (i == 256) break;
+}
+System.out.println("Done");
+
+
+6.How many times will "Hello" be printed?
+for (int i = 0; i < 3; i++) {
+    i++;
+    System.out.println("Hello");
+}
+
+
+7. What's printed?'
+int i = 1;
+do {
+    System.out.print(i);
+    i *= 2;
+} while (i < 10);
+
+
+8.How many times is the loop body executed?
+for (int i = 0; i < 10; i++) {
+    if (i % 2 == 0)
+        continue;
+    if (i == 7)
+        break;
+}
+
+9. What's the output?
+outer: for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+        if (i == j) continue outer;
+        System.out.print(i + "" + j + " ");
+    }
+}
+
+10.Output of the code?
+int i = 0;
+while (i < 3)
+    i++;
+    System.out.println(i);
+
+11. Which loop will result in infinite execution?
+      A. for (int i = 0; i < 10; i--) {}
+      B. while (true) {}
+      C.do {} while (true);
+      D. All of the above
+
+12. What will this code print?
+int i = 0;
+while (i++ < 5) {
+    if (i == 3) break;
+}
+System.out.println(i);
+
+13. What does the following loop do?
+int i = 0;
+while ((i = i + 1) < 10) {
+    System.out.print(i + " ");
+}
+
+14. What is printed?
+for (int i = 0; i < 3; i++) {
+    for (int j = i; j < 3; j++) {
+        System.out.print("*");
+    }
+    System.out.println();
+}
+
+15. What is printed?
+int x = 0;
+for (int i = 0; i < 3; i++) {
+    x += i;
+    for (int j = 0; j < 2; j++) {
+        x += j;
+    }
+}
+System.out.println(x);
+
+
+16. Choose the correct statement:
+
+A. break exits the loop entirely
+B. continue skips the current iteration
+C. Both A and B
+D. continue exits the loop
+
+
+
+17. Nested loop count:
+
+
+int count = 0;
+for (int i = 0; i < 3; i++)
+    for (int j = 0; j < 3; j++)
+        count++;
+System.out.println(count);
+
+
+18.Choose valid enhanced for-loop:
+
+A. for (int x : new int[]{1, 2, 3})
+B. for (int x = 0 : x < 10)
+C. for (x : arr)
+D. for (int x : 1,2,3)
+
+
+
+
+
+
+
+
+
+Array MCQ
+
+Q1: What is the output of the following code?
+int[] arr = {1, 2, 3, 4, 5};
+arr[2] = arr[arr[2]];
+System.out.println(Arrays.toString(arr));
+
+A) [1, 2, 4, 4, 5]
+B) [1, 2, 3, 4, 5]
+C) [1, 2, 5, 4, 5]
+D) Runtime Error
+ 
+
+Q2: What is the result?
+int[] arr = new int[5];
+System.out.println(arr[0]);
+
+A) 0
+B) Null
+C) Garbage value
+D) Compilation Error
+
+ 
+
+
+Q3: What is printed?
+int[] arr = {1, 2, 3};
+int[] arr2 = arr;
+arr2[0] = 99;
+System.out.println(arr[0]);
+
+A) 1
+B) 99
+C) 0
+D) Compilation Error
+ 
+
+
+
+Q4: Output?
+int[] arr = new int[-5];
+System.out.println("Hello");
+
+A) Hello
+B) ArrayIndexOutOfBounds
+C) NegativeArraySizeException
+D) Compilation Error
+
+ 
+
+
+Q5: What happens here?
+
+int[] a = {1, 2, 3};
+int[] b = {1, 2, 3};
+System.out.println(a == b);
+
+
+A) true
+B) false
+C) Compilation error
+D) Runtime error
+
+ 
+
+
+Q6: Output?
+int[][] arr = new int[2][];
+arr[0] = new int[]{1, 2};
+arr[1] = new int[]{3};
+System.out.println(arr[1][1]);
+
+A) 3
+B) 0
+C) Compilation error
+D) ArrayIndexOutOfBoundsException
+
+ 
+
+
+Q7: Output of the following code?
+int[] a = {1, 2, 3, 4, 5};
+int sum = 0;
+for (int i = 0; i < a.length; i++)
+    sum += a[a.length - 1 - i];
+System.out.println(sum);
+
+
+A) 15
+B) 30
+C) 0
+D) 25
+
+ 
+Q8: Time complexity of binary search on array?
+
+A) O(n)
+B) O(log n)
+C) O(n log n)
+D) O(1)
+
+ 
+Q9: What is printed?
+int[][] arr = new int[3][];
+System.out.println(arr.length);
+
+
+A) 0
+B) 3
+C) Null
+D) Compilation Error
+
+ 
+
+
+Q10: What does this print?
+String[] arr = {"Java", "Python", "C++"};
+System.out.println(Arrays.toString(arr));
+
+A) Compilation Error
+B) [Java, Python, C++]
+C) Java Python C++
+D) Null
+
+ 
+
+
+Q11: Output?
+
+int[] a = {1, 2, 3};
+System.out.println(Arrays.equals(a, new int[]{1, 2, 3}));
+
+
+A) true
+B) false
+C) Compilation error
+D) Runtime error
+
+Answer: A
+
+Q12: Output?
+int[][] arr = new int[2][2];
+arr[0][1] = 5;
+System.out.println(arr[0][1]);
+
+A) 0
+B) 5
+C) Compilation Error
+D) Null
+
+ 
+
+
+Q13: Output?
+int[] a = {1, 2, 3, 4};
+System.out.println(a[4]);
+
+
+A) 4
+B) 0
+C) Compilation Error
+D) ArrayIndexOutOfBoundsException
+
+ 
+Q14: Output?
+int[] arr = new int[3];
+arr[0] = 10;
+arr[1] = 20;
+arr[2] = 30;
+for (int x : arr)
+    x += 5;
+System.out.println(Arrays.toString(arr));
+
+A) [15, 25, 35]
+B) [10, 20, 30]
+C) [5, 5, 5]
+D) Compilation Error
+
+ 
+
+Q15: Which method sorts an array?
+
+A) Collections.sort(arr)
+B) Arrays.sort(arr)
+C) arr.sort()
+D) sort(arr)
+
+ 
+Q16: Output?
+
+
+int[] arr = {1, 2, 3};
+arr = null;
+System.out.println(arr.length);
+
+A) 3
+B) 0
+C) Compilation Error
+D) NullPointerException
+ 
+
+
+Q17: Which of these is valid array initialization?
+
+A) int arr[] = new int();
+B) int arr[] = new int[5];
+C) int arr[] = new int(5);
+D) int arr[] = int[5];
+
+ 
+Q18: Output?
+int[] a = {1, 2, 3};
+change(a);
+System.out.println(a[0]);
+
+public static void change(int[] x) {
+    x[0] = 42;
+}
+
+
+A) 1
+B) 42
+C) Compilation Error
+D) 0
+
+ 
+Q19: Which of the following are valid array declarations?
+
+A) int[] a = new int[10];
+B) int a[] = new int[10];
+C) int a[] = {1,2,3};
+D) All of the above
+
+ 
+
+
+Q20: Output?
+int[][] arr = {
+    {1, 2, 3},
+    {4, 5},
+    {6}
+};
+System.out.println(arr[1][1]);
+
+A) 5
+B) 2
+C) 6
+D) 4
+
+ 
+

@@ -1,0 +1,42 @@
+CSS Interview question 
+
+Beginner-Level CSS Questions 
+1.What is CSS and why is it used?
+2.What are the different types of CSS? (Inline, Internal, External)
+3.What is the syntax of a CSS rule? (selector, property, value)
+4.How do you apply CSS to HTML?
+5.What is the difference between id and class selectors?
+6.What is the difference between em, rem, px, and % units?
+7.What are pseudo-classes in CSS? Give examples.
+8.What is the Box Model in CSS?
+9.What’s the difference between visibility: hidden and display: none?
+10.How do you center a div horizontally and vertically?
+
+Intermediate-Level CSS Questions 
+1.What is specificity in CSS? How is it calculated?
+2.What is the difference between relative, absolute, fixed, and sticky positioning?
+3.What are pseudo-elements? Give examples. (e.g. ::before, ::after)
+4.How does z-index work?
+5.What is the difference between min-width, max-width, and width?
+6.How do media queries work in CSS?
+7.What is the difference between inline, block, and inline-block elements?
+8.What are combinators in CSS? (descendant, child, adjacent sibling, general sibling)
+9.How do you create a responsive layout using CSS?
+10.What is the difference between position: absolute and position: fixed?
+
+
+
+Advanced-Level CSS Questions 
+1.How does inheritance work in CSS? Which properties are inherited by default?
+2.What is a CSS preprocessor? Name a few (e.g., SASS, LESS).
+3.How do flexbox and grid layout systems differ? When would you use each?
+4.What is the calc() function in CSS and how is it used?
+5.What are CSS variables (custom properties)? How do you define and use them?
+6.What is the clamp() function and when should you use it?
+7.What is the difference between object-fit and background-size?
+8.What is reflow and repaint in the browser rendering process?
+9.How does CSS isolation work in Shadow DOM or component-based frameworks?
+10.What are some performance best practices when writing CSS?
+
+
+

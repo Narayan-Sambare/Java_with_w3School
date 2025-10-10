@@ -1,0 +1,74 @@
+Interview Question
+
+Q1. What is data structure and why use it to explain with real time examples?
+Q2. What is linear search and explain its algorithm with pseudocode?
+Q3. What is binary search and explain its algorithm with an example with pseudocode?
+Q4. What is the selection sort explained with an example and algorithm?
+Q5. What is bubble sort and explain its algorithm?
+Q6. What is time complexity and explain its benefit?
+Q7. What is process operation?					  2
+Q8. Explain how to calculate O(n), O(1), O(n) , O(log n) , O(n log n) etc time complexity?
+
+
+Array program for  practice?
+
+1. Find the Largest Element in an Array
+2. Find the Smallest Element in an Array
+3. Calculate the Sum and Average of Elements
+4. Search for an Element in an Array
+5. Reverse an Array
+6. Copy One Array into Another
+7. Sort an Array (Ascending Order)
+8. Count Even and Odd Numbers in an Array
+9. Merge Two Arrays
+10. Remove Duplicate Elements from Array
+
+Intermediate program using array
+1. intermediate program using array with two pointer approach and sliding window
+2. Remove Duplicates from Sorted Array
+   Approach: Two Pointers (slow/fast)
+   Example: arr = [1,1,2,2,3] → [1,2,3]
+
+3. Move All Zeros to End
+Approach: Two Pointers
+Example: arr = [0,1,0,3,12] → [1,3,12,0,0]
+
+4. Merge Two Sorted Arrays (In-place)
+Approach: Two Pointers from end
+Example: arr1 = [1,3,5,0,0,0], arr2 = [2,4,6] → [1,2,3,4,5,6]
+
+5. Reverse an Array In-place
+
+Approach: Two Pointers from both ends
+Example: arr = [1,2,3,4,5] → [5,4,3,2,1]
+
+6. Maximum Sum Subarray of Size K
+
+Approach: Sliding Window
+Example: arr = [1,4,2,10,2,3,1,0,20], k = 4 → 24
+
+
+7. First Negative Number in Every Window of Size K
+
+Approach: Sliding Window with queue
+Example: arr = [12, -1, -7, 8, -15, 30, 16, 28], k = 3
+
+
+8. Longest Subarray with Sum ≤ K
+
+Approach: Sliding Window
+Example: arr = [1,2,1,0,1,1,0], k = 4 → Length: 5
+
+
+9. Count Subarrays of Size K with Avg ≥ Target
+
+Approach: Sliding Window
+Example: arr = [2,1,3,4,1,2], k = 3, avg = 2 → Count: 2
+
+10. Minimum Size Subarray with Sum ≥ Target
+
+Approach: Sliding Window
+Example: arr = [2,3,1,2,4,3], target = 7 → Length: 2 ([4,3])
+
+
+
