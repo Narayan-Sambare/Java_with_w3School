@@ -10,28 +10,27 @@ class Student
 {
     int rollNo,m1,m2,m3,total;
     String name;
-    void setValue(int rollNo, String name, int m1,int m2, int m3)
+    Student(int rollNo, String name, int m1,int m2, int m3)
     {
         this.rollNo=rollNo;
         this.name=name;
         this.m1=m1;
         this.m2=m2;
         this.m3=m3;
+        this.total=m1+m2+m3;
     }
-    void total()
-    {
-        total=m1+m2+m3;
-        System.out.println(total);
+    void display() {
+        System.out.println("Roll No : " + rollNo);
+        System.out.println("Name : " + name);
+        System.out.println("Total Marks : " + total);
     }
-
 }
 public class Q2
 {
     public static void main(String x[])
     {
-        Student s=new Student();
-        s.setValue(1,"sanket",55,66,53);
-        s.total();
+        Student s=new Student(1,"sanket",55,66,53);
+        s.display();
 
     }
 }

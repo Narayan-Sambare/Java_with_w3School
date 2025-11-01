@@ -9,21 +9,22 @@
 //  This helps you understand how constructors can perform initial calculations immediately after object creation.
 class Employee
 {
-    int empId,basicSalary,hra,da,grossSalary;
+    int empId;
+    float basicSalary,hra,da,grossSalary;
     String empName;
-    Employee(int empId,String empName,int basicSalary)
+    Employee(int empId,String empName,float basicSalary)
     {
         this.empId=empId;
         this.empName=empName;
         this.basicSalary=basicSalary;
-    }
-    int calGrossSalary()
-    {
         hra=(basicSalary*10)/100;
         da=(basicSalary*15)/100;
         grossSalary=basicSalary+hra+da;
-        return grossSalary;
     }
+   void display()
+   {
+     System.out.println("Emp id ("+empId+")\nEmp Name ("+empName+")\nBasic salary ("+basicSalary+")\nGross Salary ("+grossSalary+")");
+   }
 
 }
 public class Q1
@@ -31,8 +32,7 @@ public class Q1
     public static void main(String x[])
     {
         Employee emp=new Employee(1, "sanket", 15000);
-        int result=emp.calGrossSalary();
-        System.out.println("Gross Salary is "+result);
+        emp.display();
         
     }
 }

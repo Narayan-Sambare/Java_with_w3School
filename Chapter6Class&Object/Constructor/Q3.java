@@ -18,11 +18,14 @@ class BankAccount
     BankAccount()
     {
         balance=1000;
+        System.out.println("\nDefault account created with balance : "+balance);
     }
-    void setValue(int accNo,String accHolder)
+    BankAccount(int accNo,String accHolder,double balance)
     {
+        this();
         this.accNo=accNo;
         this.accHolder=accHolder;
+        this.balance=balance;
     }
     void deposit(int b)
     {
@@ -30,9 +33,9 @@ class BankAccount
     }
     void display()
     {
-        System.out.println(accNo);
-        System.out.println(accHolder);
-        System.out.println(balance);
+        System.out.println("\nAccount No: "+accNo);
+        System.out.println("Account Holder Name :"+accHolder);
+        System.out.println("Account Balance :"+balance);
     }
 
 }
@@ -40,9 +43,8 @@ public class Q3
 {
     public static void main(String x[])
     {
-        BankAccount bc=new BankAccount();
-        setValue(123456789,"sanket");
-        bc.deposit(500);
+        BankAccount bc=new BankAccount(123456789,"sanket",501);
+        bc.deposit(3);
         bc.display();
     }
 
