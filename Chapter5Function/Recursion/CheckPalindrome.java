@@ -23,7 +23,7 @@ public class CheckPalindrome
 			System.out.println("Number is not palindrom");
 		}
 	}
-
+//12321
 	
 	 public static int isPalindrome(int n,int rev)
 	 {
@@ -32,9 +32,6 @@ public class CheckPalindrome
 			return rev;
 		}
 
-		int temp =n%10;
-		rev=rev*10+temp;
-		return isPalindrome(n/10, rev);
-		
+		return isPalindrome(n/10, (rev*10+n%10));
 	 }
 }
