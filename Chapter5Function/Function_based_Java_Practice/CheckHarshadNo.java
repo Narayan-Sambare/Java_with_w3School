@@ -20,7 +20,7 @@ public class CheckHarshadNo
             n=n/10;
         }
         
-        if(t%Sum==0)
+        if(t%sum==0)
         {
            System.out.println("Harshad number ");
         }
