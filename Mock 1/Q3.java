@@ -16,32 +16,40 @@ public class Q3{
 	public static void main(String x[]){
 	Scanner sc = new Scanner(System.in);
 	
-		for(int i=1; i<=7 ;i++){
-			for(int j=1 ; j<=i ;j++){
-				if(i<=4){
-					if( j==i){
-					System.out.print(i);
-					}else{
+		for(int i=1; i<=7 ;i++)
+		{
+			for(int j=1 ; j<=i ;j++)
+			{
+				if(i<=4)
+				{
+					if( j==i)
+					{
+						System.out.print(i);
+					}
+					else
+					{
 						System.out.print(i+"*");
 					}
-				}else {
-					if(j==8-i){
-					System.out.print(8-i);
-					}else if(j<8-i){
+				}
+				else
+				{
+					if(j==8-i)
+					{
+						System.out.print(8-i);
+					}
+					else if(j<8-i)
+					{
 						System.out.print(8-i+"*");
-					}else{
+					}
+					else
+					{
 						System.out.print(" ");
 					}
 				}
 			}
 			System.out.println();
 		}
-			
-			
-		
-	
 	}
-
 }
 
 

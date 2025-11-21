@@ -4,7 +4,7 @@
    Sum of digits at odd places (from right) 
    Finally print the difference of these sums. 
    Example: n = 572631 → even places sum = 7+6+1 = 14,  
-odd places sum = 5+2+3 = 10 → difference = 4.
+	odd places sum = 5+2+3 = 10 → difference = 4.
 */
 
 import java.util.*;
@@ -18,6 +18,7 @@ public class Q1{
 	
 		while(a!=0){
 		sum=sum+ a%10;
+		System.out.print(a%10+"+");
 		a=a/100;
 		}
 		System.out.println("Even place sum:" + sum);
@@ -26,6 +27,7 @@ public class Q1{
 		b=b/10;
 		while(b!=0){
 			sum1 = sum1+b%10;
+			System.out.print(b%10+"+");
 			b = b/100;
 		}
 		System.out.println("Odd place sum:" + sum1);

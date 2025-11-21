@@ -10,19 +10,21 @@ public class Q2{
 	while(i<=n){
 		
 		int a=i;
-		int sum=0;
-		while(a!=0){
-			int rem = a%10;
+			int sum=0;
+			while(a!=0)
+			{
+				int rem = a%10;
 				int f=1;
 				while(rem!=0){
 					f = f*rem;
 					rem--;
 				}
-			sum =sum+ f;
-			a=a/10;
-		}
+				sum =sum+ f;
+				a=a/10;
+			}
 		
-		if(sum == i){
+		if(sum == i)
+		{
 			System.out.print(i+" ");
 		}
 		
