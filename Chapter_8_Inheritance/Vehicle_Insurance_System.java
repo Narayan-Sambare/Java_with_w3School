@@ -1,5 +1,5 @@
 import java.util.*;
-public class main {
+public class Vehicle_Insurance_System {
     public static void main(String x[]) {
         Scanner sc=new Scanner(System.in);
         Vehicle v[]=new Vehicle[2];
