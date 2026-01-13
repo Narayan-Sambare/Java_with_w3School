@@ -5,6 +5,7 @@ public class Book {
 	private String author;
 	private int id;
 	private int price;
+
 	public Book() {}
 	public Book(String name,String author,int id,int price){
 		this.name=name;
@@ -37,7 +38,5 @@ public class Book {
 	}
 	public void setPrice(int price) {
 		this.price = price;
-	}
-	
-	
+	}	
 }
