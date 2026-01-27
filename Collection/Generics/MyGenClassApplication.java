@@ -25,7 +25,8 @@ class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public long getSal() {
+	public long getSal() 
+	{
 		return sal;
 	}
 	public void setSal(long sal) {
