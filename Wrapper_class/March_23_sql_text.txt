@@ -1,0 +1,98 @@
+Q1. List all bookings with customer name and room number.
+
+select c.full_name,r.room_number from customer c join booking b on b.customer_id=c.customer_id join room r on r.room_id=b.room_id;
++----------------+-------------+
+| full_name      | room_number |
++----------------+-------------+
+| sanket sambare | 101         |
+| ram sambare    | 102         |
+| ram sambare    | 101         |
+| ram sambare    | 104         |
+| sham patil     | 104         |
+| kunal khalkar  | 101         |
+| kunal patil    | 102         |
+| kunal patil    | 102         |
++----------------+-------------+
+Q2 2. Show room details along with hotel name.
+
+select r.room_id, r.hotel_id,r.room_number,r.room_type,r.price_per_night,is_available,h.hotel_name from room r join hotel h on h.hotel_id=r.hotel_id;
++---------+----------+-------------+-----------+-----------------+--------------+--------------------+
+| room_id | hotel_id | room_number | room_type | price_per_night | is_available | hotel_name         |
++---------+----------+-------------+-----------+-----------------+--------------+--------------------+
+|       9 |        1 | 201         | standerd  |         1000.00 |            1 | radhe hotel        |
+|      10 |        1 | 202         | standerd  |         1100.00 |            1 | radhe hotel        |
+|      11 |        1 | 203         | standerd  |         1150.00 |            1 | radhe hotel        |
+|      12 |        1 | 204         | standerd  |         1250.00 |            1 | radhe hotel        |
+|      13 |        2 | 204         | standerd  |         1250.00 |            1 | raju hotel         |
+|      14 |        2 | 205         | standerd  |         1450.00 |            1 | raju hotel         |
+|      15 |        3 | 205         | standerd  |         1450.00 |            1 | sayli hotel        |
+|      16 |        3 | 301         | standerd  |         1550.00 |            1 | sayli hotel        |
+|       4 |        4 | 101         | suite     |         3000.00 |            1 | shere Panjab hotel |
+|       5 |        4 | 102         | suite     |         5000.00 |            1 | shere Panjab hotel |
+|       6 |        4 | 103         | suite     |         6000.00 |            1 | shere Panjab hotel |
+|       7 |        4 | 104         | suite     |         7000.00 |            1 | shere Panjab hotel |
+|       8 |        4 | 105         | suite     |         8000.00 |            1 | shere Panjab hotel |
+|       1 |        5 | 101         | deluxe    |        10000.00 |            1 | mauli hotel        |
+|       2 |        5 | 102         | deluxe    |        12000.00 |            1 | mauli hotel        |
+|       3 |        5 | 104         | deluxe    |        13000.00 |            1 | mauli hotel        |
++---------+----------+-------------+-----------+-----------------+--------------+--------------------+
+
+Q3 3. List customers who booked a room in a specific hotel (e.g., "Hotel Sunrise").
+
+select c.full_name as Customer_name, h.hotel_name from customer c join booking b on b.customer_id=c.customer_id join room r on r.room_id=b.room_id join hotel h on h.hotel_id=r.hotel_id;
++----------------+--------------------+
+| Customer_name  | hotel_name         |
++----------------+--------------------+
+| kunal khalkar  | shere Panjab hotel |
+| kunal patil    | shere Panjab hotel |
+| kunal patil    | shere Panjab hotel |
+| sanket sambare | mauli hotel        |
+| ram sambare    | mauli hotel        |
+| ram sambare    | mauli hotel        |
+| sham patil     | mauli hotel        |
+| ram sambare    | mauli hotel        |
++----------------+--------------------+
+8 rows in set (0.00 sec)
+
+Q4 4. Show all rooms and their current availability status with hotel names
+
+select r.room_number, h.hotel_name, r.is_available from room r join booking b on b.room_id=r.room_id join hotel h on h.hotel_id=r.hotel_id ;
++-------------+--------------------+--------------+
+| room_number | hotel_name         | is_available |
++-------------+--------------------+--------------+
+| 101         | shere Panjab hotel |            1 |
+| 102         | shere Panjab hotel |            1 |
+| 102         | shere Panjab hotel |            1 |
+| 101         | mauli hotel        |            1 |
+| 101         | mauli hotel        |            1 |
+| 102         | mauli hotel        |            1 |
+| 104         | mauli hotel        |            1 |
+| 104         | mauli hotel        |            1 |
++-------------+--------------------+--------------+
+8 rows in set (0.00 sec)
+
+Q5. Display bookings where total amount is above ₹5000.
+
+
+mysql> select * from booking where total_amount>5000 ;
++------------+-------------+---------+---------------+----------------+--------------+
+| booking_id | customer_id | room_id | check_in_date | check_out_date | total_amount |
++------------+-------------+---------+---------------+----------------+--------------+
+|          1 |           1 |       1 | 2026-01-10    | 2026-01-11     |     15000.00 |
+|          2 |           2 |       2 | 2026-01-10    | 2026-01-11     |     15000.00 |
+|          3 |           3 |       3 | 2026-01-10    | 2026-01-11     |     15000.00 |
+|          4 |           4 |       4 | 2026-01-10    | 2026-01-11     |     15000.00 |
+|          5 |           5 |       5 | 2026-01-10    | 2026-01-11     |     15000.00 |
+|          6 |           5 |       5 | 2026-01-10    | 2026-01-11     |     15000.00 |
+|          8 |           2 |       3 | 2026-01-01    | 2026-01-11     |     25000.00 |
++------------+-------------+---------+---------------+----------------+--------------+
+
+Q6  Show total revenue generated per hotel.
+
+select h.hotel_name, sum(b.total_amount) as revenue from booking b join room r on r.room_id=b.room_id join hotel h on h.hotel_id=r.hotel_id group by hotel_name;
++--------------------+----------+
+| hotel_name         | revenue  |
++--------------------+----------+
+| shere Panjab hotel | 45000.00 |
+| mauli hotel        | 71000.00 |
++--------------------+----------+
