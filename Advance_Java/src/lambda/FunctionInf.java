@@ -1,7 +1,10 @@
 package lambda;
+import java.awt.List;
+import java.util.*;
 import java.util.function.*;
 public class FunctionInf {
 	public static void main(String[] args) {
+		
 //		Function<Integer,Integer> f=new Function<Integer,Integer>() {
 //			@Override
 //			public Integer apply(Integer t) {	

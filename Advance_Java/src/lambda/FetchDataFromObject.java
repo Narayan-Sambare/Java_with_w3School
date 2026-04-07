@@ -54,5 +54,8 @@ class Employee{
 	public void setSal(int sal) {
 		this.sal = sal;
 	}
-	
+	 @Override
+	    public String toString() {
+	        return name + "-" + sal;
+	    }
 }
